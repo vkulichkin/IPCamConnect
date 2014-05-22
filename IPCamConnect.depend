@@ -1,0 +1,391 @@
+# depslib dependency file v1.0
+1396426711 source:d:\work\splitcam_2012_misi\apps\ipcamera\ipcamconnect\main.cpp
+	<windows.h>
+
+1396422325 d:\work\splitcam_2012_misi\apps\ipcamera\ipcamconnect\main.h
+	<windows.h>
+
+1396260738 source:d:\work\splitcam_2012_misi\apps\ipcamera\ipcamconnect\resource.rc
+	<windows.h>
+
+1396264286 source:d:\work\splitcam_2012_misi\apps\ipcamera\ipcamconnect\src\cipcamconnect.cpp
+	"CIPCamConnect.h"
+
+1396351878 d:\work\splitcam_2012_misi\apps\ipcamera\ipcamconnect\include\cipcamconnect.h
+
+1399447858 source:d:\work\splitcam_2012_misi\apps\ipcamera\ipcamconnect\cipcamconnect.cpp
+	"CIPCamConnect.h"
+	<process.h>
+	"avcodec.h"
+	"avformat.h"
+	"fifo.h"
+	"swscale.h"
+	"opt.h"
+	"imgutils.h"
+	"swresample.h"
+
+1399362860 d:\work\splitcam_2012_misi\apps\ipcamera\ipcamconnect\cipcamconnect.h
+	<windows.h>
+
+1383059958 d:\work\splitcam_2012_misi\deps\braoadcast\include\libavcodec\avcodec.h
+	<errno.h>
+	"libavutil/samplefmt.h"
+	"libavutil/avutil.h"
+	"libavutil/cpu.h"
+	"libavutil/channel_layout.h"
+	"libavutil/dict.h"
+	"libavutil/log.h"
+	"libavutil/pixfmt.h"
+	"libavutil/rational.h"
+	"libavcodec/version.h"
+	"old_codec_ids.h"
+
+1383059959 d:\work\splitcam_2012_misi\deps\braoadcast\include\libavutil\samplefmt.h
+	<stdint.h>
+	"avutil.h"
+	"attributes.h"
+
+1383059959 d:\work\splitcam_2012_misi\deps\braoadcast\include\libavutil\avutil.h
+	"common.h"
+	"error.h"
+	"version.h"
+	"mathematics.h"
+	"rational.h"
+	"intfloat_readwrite.h"
+	"log.h"
+	"pixfmt.h"
+
+1383059959 d:\work\splitcam_2012_misi\deps\braoadcast\include\libavutil\common.h
+	<ctype.h>
+	<errno.h>
+	<inttypes.h>
+	<limits.h>
+	<math.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"attributes.h"
+	"version.h"
+	"libavutil/avconfig.h"
+	"config.h"
+	"intmath.h"
+	"common.h"
+	"mem.h"
+	"internal.h"
+
+1383059959 d:\work\splitcam_2012_misi\deps\braoadcast\include\libavutil\attributes.h
+
+1383059959 d:\work\splitcam_2012_misi\deps\braoadcast\include\libavutil\version.h
+
+1383059959 d:\work\splitcam_2012_misi\deps\braoadcast\include\libavutil\avconfig.h
+
+1383059959 d:\work\splitcam_2012_misi\deps\braoadcast\include\libavutil\mem.h
+	<limits.h>
+	<stdint.h>
+	"attributes.h"
+	"error.h"
+	"avutil.h"
+
+1383059959 d:\work\splitcam_2012_misi\deps\braoadcast\include\libavutil\error.h
+	<errno.h>
+	<stddef.h>
+
+1383059959 d:\work\splitcam_2012_misi\deps\braoadcast\include\libavutil\mathematics.h
+	<stdint.h>
+	<math.h>
+	"attributes.h"
+	"rational.h"
+	"intfloat.h"
+
+1383059959 d:\work\splitcam_2012_misi\deps\braoadcast\include\libavutil\rational.h
+	<stdint.h>
+	<limits.h>
+	"attributes.h"
+
+1383059959 d:\work\splitcam_2012_misi\deps\braoadcast\include\libavutil\intfloat.h
+	<stdint.h>
+	"attributes.h"
+
+1383059959 d:\work\splitcam_2012_misi\deps\braoadcast\include\libavutil\intfloat_readwrite.h
+	<stdint.h>
+	"attributes.h"
+
+1383059959 d:\work\splitcam_2012_misi\deps\braoadcast\include\libavutil\log.h
+	<stdarg.h>
+	"avutil.h"
+	"attributes.h"
+
+1383059959 d:\work\splitcam_2012_misi\deps\braoadcast\include\libavutil\pixfmt.h
+	"libavutil/avconfig.h"
+	"libavutil/version.h"
+	"old_pix_fmts.h"
+
+1383059959 d:\work\splitcam_2012_misi\deps\braoadcast\include\libavutil\old_pix_fmts.h
+
+1383059959 d:\work\splitcam_2012_misi\deps\braoadcast\include\libavutil\cpu.h
+	"attributes.h"
+
+1383059959 d:\work\splitcam_2012_misi\deps\braoadcast\include\libavutil\channel_layout.h
+	<stdint.h>
+
+1383059959 d:\work\splitcam_2012_misi\deps\braoadcast\include\libavutil\dict.h
+
+1383059958 d:\work\splitcam_2012_misi\deps\braoadcast\include\libavcodec\version.h
+	"libavutil/avutil.h"
+
+1383059958 d:\work\splitcam_2012_misi\deps\braoadcast\include\libavcodec\old_codec_ids.h
+	"libavutil/common.h"
+
+1383059958 d:\work\splitcam_2012_misi\deps\braoadcast\include\libavformat\avformat.h
+	<time.h>
+	<stdio.h>
+	"libavcodec/avcodec.h"
+	"libavutil/dict.h"
+	"libavutil/log.h"
+	"avio.h"
+	"libavformat/version.h"
+	"libavutil/time.h"
+
+1383059959 d:\work\splitcam_2012_misi\deps\braoadcast\include\libavutil\time.h
+	<stdint.h>
+
+1383059958 d:\work\splitcam_2012_misi\deps\braoadcast\include\libavformat\avio.h
+	<stdint.h>
+	"libavutil/common.h"
+	"libavutil/dict.h"
+	"libavutil/log.h"
+	"libavformat/version.h"
+
+1383059958 d:\work\splitcam_2012_misi\deps\braoadcast\include\libavformat\version.h
+	"libavutil/avutil.h"
+
+1383059959 d:\work\splitcam_2012_misi\deps\braoadcast\include\libavutil\fifo.h
+	<stdint.h>
+	"avutil.h"
+	"attributes.h"
+
+1383059958 d:\work\splitcam_2012_misi\deps\braoadcast\include\libswscale\swscale.h
+	<stdint.h>
+	"libavutil/avutil.h"
+	"libavutil/log.h"
+	"libavutil/pixfmt.h"
+	"version.h"
+
+1383059958 d:\work\splitcam_2012_misi\deps\braoadcast\include\libswscale\version.h
+	"libavutil/avutil.h"
+
+1383059959 d:\work\splitcam_2012_misi\deps\braoadcast\include\libavutil\opt.h
+	"rational.h"
+	"avutil.h"
+	"dict.h"
+	"log.h"
+	"pixfmt.h"
+	"samplefmt.h"
+
+1383059959 d:\work\splitcam_2012_misi\deps\braoadcast\include\libavutil\imgutils.h
+	"avutil.h"
+	"pixdesc.h"
+
+1383059959 d:\work\splitcam_2012_misi\deps\braoadcast\include\libavutil\pixdesc.h
+	<inttypes.h>
+	"pixfmt.h"
+
+1383059958 d:\work\splitcam_2012_misi\deps\braoadcast\include\libswresample\swresample.h
+	<stdint.h>
+	"libavutil/samplefmt.h"
+	"libswresample/version.h"
+
+1383059958 d:\work\splitcam_2012_misi\deps\braoadcast\include\libswresample\version.h
+	"libavutil/avutil.h"
+
+1399460273 source:d:\work\splitcam_2012\apps\ipcamera\ipcamconnect\main.cpp
+	<windows.h>
+
+1399460273 source:d:\work\splitcam_2012\apps\ipcamera\ipcamconnect\resource.rc
+	<windows.h>
+
+1399976717 source:d:\work\splitcam_2012\apps\ipcamera\ipcamconnect\cipcamconnect.cpp
+	"CIPCamConnect.h"
+	<process.h>
+	"avcodec.h"
+	"avformat.h"
+	"fifo.h"
+	"swscale.h"
+	"opt.h"
+	"imgutils.h"
+	"swresample.h"
+
+1399460273 d:\work\splitcam_2012\apps\ipcamera\ipcamconnect\cipcamconnect.h
+	<windows.h>
+
+1381129081 d:\work\splitcam_2012\deps\braoadcast\include\libavcodec\avcodec.h
+	<errno.h>
+	"libavutil/samplefmt.h"
+	"libavutil/avutil.h"
+	"libavutil/cpu.h"
+	"libavutil/channel_layout.h"
+	"libavutil/dict.h"
+	"libavutil/log.h"
+	"libavutil/pixfmt.h"
+	"libavutil/rational.h"
+	"libavcodec/version.h"
+	"old_codec_ids.h"
+
+1381129081 d:\work\splitcam_2012\deps\braoadcast\include\libavutil\samplefmt.h
+	<stdint.h>
+	"avutil.h"
+	"attributes.h"
+
+1381129081 d:\work\splitcam_2012\deps\braoadcast\include\libavutil\avutil.h
+	"common.h"
+	"error.h"
+	"version.h"
+	"mathematics.h"
+	"rational.h"
+	"intfloat_readwrite.h"
+	"log.h"
+	"pixfmt.h"
+
+1381129081 d:\work\splitcam_2012\deps\braoadcast\include\libavutil\common.h
+	<ctype.h>
+	<errno.h>
+	<inttypes.h>
+	<limits.h>
+	<math.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"attributes.h"
+	"version.h"
+	"libavutil/avconfig.h"
+	"config.h"
+	"intmath.h"
+	"common.h"
+	"mem.h"
+	"internal.h"
+
+1381129081 d:\work\splitcam_2012\deps\braoadcast\include\libavutil\attributes.h
+
+1381129081 d:\work\splitcam_2012\deps\braoadcast\include\libavutil\version.h
+
+1381129081 d:\work\splitcam_2012\deps\braoadcast\include\libavutil\avconfig.h
+
+1381129081 d:\work\splitcam_2012\deps\braoadcast\include\libavutil\mem.h
+	<limits.h>
+	<stdint.h>
+	"attributes.h"
+	"error.h"
+	"avutil.h"
+
+1381129081 d:\work\splitcam_2012\deps\braoadcast\include\libavutil\error.h
+	<errno.h>
+	<stddef.h>
+
+1381129081 d:\work\splitcam_2012\deps\braoadcast\include\libavutil\mathematics.h
+	<stdint.h>
+	<math.h>
+	"attributes.h"
+	"rational.h"
+	"intfloat.h"
+
+1381129081 d:\work\splitcam_2012\deps\braoadcast\include\libavutil\rational.h
+	<stdint.h>
+	<limits.h>
+	"attributes.h"
+
+1381129081 d:\work\splitcam_2012\deps\braoadcast\include\libavutil\intfloat.h
+	<stdint.h>
+	"attributes.h"
+
+1381129081 d:\work\splitcam_2012\deps\braoadcast\include\libavutil\intfloat_readwrite.h
+	<stdint.h>
+	"attributes.h"
+
+1381129081 d:\work\splitcam_2012\deps\braoadcast\include\libavutil\log.h
+	<stdarg.h>
+	"avutil.h"
+	"attributes.h"
+
+1381129081 d:\work\splitcam_2012\deps\braoadcast\include\libavutil\pixfmt.h
+	"libavutil/avconfig.h"
+	"libavutil/version.h"
+	"old_pix_fmts.h"
+
+1381129081 d:\work\splitcam_2012\deps\braoadcast\include\libavutil\old_pix_fmts.h
+
+1381129081 d:\work\splitcam_2012\deps\braoadcast\include\libavutil\cpu.h
+	"attributes.h"
+
+1381129081 d:\work\splitcam_2012\deps\braoadcast\include\libavutil\channel_layout.h
+	<stdint.h>
+
+1381129081 d:\work\splitcam_2012\deps\braoadcast\include\libavutil\dict.h
+
+1381129081 d:\work\splitcam_2012\deps\braoadcast\include\libavcodec\version.h
+	"libavutil/avutil.h"
+
+1381129080 d:\work\splitcam_2012\deps\braoadcast\include\libavcodec\old_codec_ids.h
+	"libavutil/common.h"
+
+1381129080 d:\work\splitcam_2012\deps\braoadcast\include\libavformat\avformat.h
+	<time.h>
+	<stdio.h>
+	"libavcodec/avcodec.h"
+	"libavutil/dict.h"
+	"libavutil/log.h"
+	"avio.h"
+	"libavformat/version.h"
+	"libavutil/time.h"
+
+1381129081 d:\work\splitcam_2012\deps\braoadcast\include\libavutil\time.h
+	<stdint.h>
+
+1381129080 d:\work\splitcam_2012\deps\braoadcast\include\libavformat\avio.h
+	<stdint.h>
+	"libavutil/common.h"
+	"libavutil/dict.h"
+	"libavutil/log.h"
+	"libavformat/version.h"
+
+1381129080 d:\work\splitcam_2012\deps\braoadcast\include\libavformat\version.h
+	"libavutil/avutil.h"
+
+1381129081 d:\work\splitcam_2012\deps\braoadcast\include\libavutil\fifo.h
+	<stdint.h>
+	"avutil.h"
+	"attributes.h"
+
+1381129080 d:\work\splitcam_2012\deps\braoadcast\include\libswscale\swscale.h
+	<stdint.h>
+	"libavutil/avutil.h"
+	"libavutil/log.h"
+	"libavutil/pixfmt.h"
+	"version.h"
+
+1381129080 d:\work\splitcam_2012\deps\braoadcast\include\libswscale\version.h
+	"libavutil/avutil.h"
+
+1381129081 d:\work\splitcam_2012\deps\braoadcast\include\libavutil\opt.h
+	"rational.h"
+	"avutil.h"
+	"dict.h"
+	"log.h"
+	"pixfmt.h"
+	"samplefmt.h"
+
+1381129081 d:\work\splitcam_2012\deps\braoadcast\include\libavutil\imgutils.h
+	"avutil.h"
+	"pixdesc.h"
+
+1381129081 d:\work\splitcam_2012\deps\braoadcast\include\libavutil\pixdesc.h
+	<inttypes.h>
+	"pixfmt.h"
+
+1381129080 d:\work\splitcam_2012\deps\braoadcast\include\libswresample\swresample.h
+	<stdint.h>
+	"libavutil/samplefmt.h"
+	"libswresample/version.h"
+
+1381129080 d:\work\splitcam_2012\deps\braoadcast\include\libswresample\version.h
+	"libavutil/avutil.h"
+
