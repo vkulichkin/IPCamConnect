@@ -176,7 +176,13 @@ void CIPCameraMJPEGHTTP::GetBuffer(unsigned char** pBuf, int &iSize)
 	strSumBuf = strSumBuf.substr(i, strSumBuf.length() - i);
 	j = 0;
 	char strLengthNumber[20] = {0};
-	int size =  strSumBuf.size() - 1;
+	int size =  strSumBuf.size();
+	if (size == 0)
+	{
+		LeaveCriticalSection(&m_cSection);
+		return;
+	}
+	size--;
 	while ((ch = strSumBuf.at(j)) != 0x0d)
 	{
 		strLengthNumber[j++] += ch;
