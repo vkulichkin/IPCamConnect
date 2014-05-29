@@ -35,7 +35,7 @@ CIPCameraMJPEGHTTP::CIPCameraMJPEGHTTP(char* strURL)
 CIPCameraMJPEGHTTP::~CIPCameraMJPEGHTTP(void)
 {
 	m_bStopThread = true;
-	int nCount = 1000;
+	int nCount = 2000;
 	for (int i = 0; i < nCount; i++)
 	{
 		if (!m_bThreadRun)
@@ -176,8 +176,16 @@ void CIPCameraMJPEGHTTP::GetBuffer(unsigned char** pBuf, int &iSize)
 	strSumBuf = strSumBuf.substr(i, strSumBuf.length() - i);
 	j = 0;
 	char strLengthNumber[20] = {0};
+	int size =  strSumBuf.size() - 1;
 	while ((ch = strSumBuf.at(j)) != 0x0d)
+	{
 		strLengthNumber[j++] += ch;
+		if (j > size)
+		{
+			LeaveCriticalSection(&m_cSection);
+			return;
+		}
+	}
 	nSizeFrame = atoi(strLengthNumber) - 2;
 	i += strlen(strLengthNumber);
 	if (nSizeFrame > (int)m_deqSumBuf.size() - i - 4)
