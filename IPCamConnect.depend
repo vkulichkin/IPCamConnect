@@ -389,7 +389,7 @@
 1381129080 d:\work\splitcam_2012\deps\braoadcast\include\libswresample\version.h
 	"libavutil/avutil.h"
 
-1400171938 source:d:\vc.rac\ipcamera\ipcamconnect\cipcamconnect.cpp
+1401548640 source:d:\vc.rac\ipcamera\ipcamconnect\cipcamconnect.cpp
 	"CIPCamConnect.h"
 	<process.h>
 	"avcodec.h"
@@ -400,7 +400,7 @@
 	"imgutils.h"
 	"swresample.h"
 
-1399468725 d:\vc.rac\ipcamera\ipcamconnect\cipcamconnect.h
+1401549671 d:\vc.rac\ipcamera\ipcamconnect\cipcamconnect.h
 	<windows.h>
 
 1401502092 d:\vc.rac\ipcamera\ipcamconnect\include\ffmpeg\libavcodec\avcodec.h

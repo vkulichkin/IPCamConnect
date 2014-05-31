@@ -2,10 +2,13 @@
 #include <string>
 #include <vector>
 
-CIPCameraMJPEGHTTP::CIPCameraMJPEGHTTP(char* strURL)
+DLL_EXPORT  ICIPCameraMJPEGHTTP* WINAPI CreateICIPCameraMJPEGHTTP(const LPCSTR strURL)
+{
+     return new CIPCameraMJPEGHTTP(strURL);
+}
+
+CIPCameraMJPEGHTTP::CIPCameraMJPEGHTTP(const char* strURL)
 	: m_bErr(false)
-	//, m_pBuf(NULL)
-	//, m_iBufsize(0)
 	, m_bThreadRun(false)
 	, m_bStopThread(false)
 {
@@ -133,8 +136,8 @@ void CIPCameraMJPEGHTTP::Connect(void* ctx)
 void CIPCameraMJPEGHTTP::GetBuffer(unsigned char** pBuf, int &iSize)
 {
 	unsigned char ch;
-	int i, j;
-	int nSizeFrame;
+	unsigned int i, j;
+	unsigned int nSizeFrame;
 
 	if (*pBuf)
 	{
@@ -150,7 +153,7 @@ void CIPCameraMJPEGHTTP::GetBuffer(unsigned char** pBuf, int &iSize)
 		return;
 	}
 	std::string strSumBuf;
-	for (i = 0; i < (int)m_deqSumBuf.size(); i++)
+	for (i = 0; i < m_deqSumBuf.size(); i++)
 	{
 		ch = m_deqSumBuf.at(i);
 		if (ch == 0x00)
@@ -174,7 +177,7 @@ void CIPCameraMJPEGHTTP::GetBuffer(unsigned char** pBuf, int &iSize)
 	strSumBuf = strSumBuf.substr(i, strSumBuf.length() - i);
 	j = 0;
 	char strLengthNumber[20] = {0};
-	int size =  strSumBuf.size();
+	unsigned int size =  strSumBuf.size();
 	if (size == 0)
 	{
 		LeaveCriticalSection(&m_cSection);
@@ -192,7 +195,7 @@ void CIPCameraMJPEGHTTP::GetBuffer(unsigned char** pBuf, int &iSize)
 	}
 	nSizeFrame = atoi(strLengthNumber) - 2;
 	i += strlen(strLengthNumber);
-	if (nSizeFrame > (int)m_deqSumBuf.size() - i - 4)
+	if (nSizeFrame > m_deqSumBuf.size() - i - 4)
 	{
 		LeaveCriticalSection(&m_cSection);
 		return;
@@ -204,12 +207,12 @@ void CIPCameraMJPEGHTTP::GetBuffer(unsigned char** pBuf, int &iSize)
 		return;
 	}
 	i += 4; //\r\n\r\n
-	for (int j = 0; j < i; j++)
+	for (j = 0; j < i; j++)
 		m_deqSumBuf.pop_front();
 
 	iSize = nSizeFrame;
 	*pBuf = new unsigned char [iSize];
-	for (int i = 0; i < nSizeFrame; i++)
+	for (i = 0; i < nSizeFrame; i++)
 	{
 		ch = m_deqSumBuf.at(0);
 		m_deqSumBuf.pop_front();

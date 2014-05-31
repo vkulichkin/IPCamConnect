@@ -208,8 +208,8 @@ void CIPCamConnect::Connect(void* ctx)
    }
 
     //prepare frames
-    pFrame=avcodec_alloc_frame();
-    pFrameRGB=avcodec_alloc_frame();
+    pFrame = av_frame_alloc();
+    pFrameRGB = av_frame_alloc();
     if (!pFrame || !pFrameRGB)
     {
         wcscpy(pParent->m_strErr, L"No memory to allocate frames");

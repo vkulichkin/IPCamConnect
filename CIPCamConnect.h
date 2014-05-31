@@ -20,9 +20,17 @@ struct ICIPCamConnect
 };
 
 
+struct ICIPCameraMJPEGHTTP
+{
+	virtual bool CheckErr(wchar_t* strErr) = 0;
+	virtual void GetBuffer(unsigned char** pBuf, int &iSize) = 0;
+	virtual void GetURL(char** strURL) = 0;
+};
+
 extern "C"
 {
     DLL_EXPORT ICIPCamConnect* WINAPI CreateIPCamConnectClass(const LPCSTR strURL);
+    DLL_EXPORT ICIPCameraMJPEGHTTP* WINAPI CreateICIPCameraMJPEGHTTP(const LPCSTR strURL);
 }
 
 #endif // CIPCAMCONNECT_H

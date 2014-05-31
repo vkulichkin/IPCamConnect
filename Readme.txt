@@ -6,7 +6,24 @@ Handling streams of IP cameras:
 CodeBlocks project with using FFMPEG and OpenCV libraries
 
 Output:
-IPCamConnect.dll
+in
+\IPCamera\IPCamConnect\bin\Debug-Win32
+\IPCamera\IPCamConnect\bin\Release-Win32
+
+1. IPCamConnect.dll
+2. IPCamConnect.lib - .lib for MSVC projects 
+3. CIPCamConnect.h  - a header file for project
+
+Export fabric functions:
+
+1. ICIPCamConnect* WINAPI CreateIPCamConnectClass(const LPCSTR strURL);
+
+- create the object of CIPCamConnect for H264 by RTSP
+
+2. ICIPCameraMJPEGHTTP* WINAPI CreateICIPCameraMJPEGHTTP(const LPCSTR strURL);
+
+- create the object of CIPCameraMJPEGHTTP for MJPEG by HTTP
+
 
 Victor Kulichkin
 http://www.kvy.com.ua

@@ -1,23 +1,22 @@
 #pragma once
 #include <WinInet.h>
 #include <deque>
+#include "CIPCamConnect.h"
 
-class CIPCameraMJPEGHTTP
+class CIPCameraMJPEGHTTP : public ICIPCameraMJPEGHTTP
 {
 public:
-	CIPCameraMJPEGHTTP(char* strURL);
+	CIPCameraMJPEGHTTP(const char* strURL);
 	~CIPCameraMJPEGHTTP(void);
-	bool CheckErr(wchar_t* strErr);
+	virtual bool CheckErr(wchar_t* strErr);
 	static void Connect(void* ctx);
-	void GetBuffer(unsigned char** pBuf, int &iSize);
-	void GetURL(char** strURL);
+	virtual void GetBuffer(unsigned char** pBuf, int &iSize);
+	virtual void GetURL(char** strURL);
 private:
 	char* m_strURL;
 	bool m_bErr;
 	wchar_t m_strErr[MAX_PATH];
 	int PeekData(HINTERNET hRequest);
-	//int m_iBufsize;
-	//unsigned char* m_pBuf;
 	bool m_bThreadRun;
 	bool m_bStopThread;
 	CRITICAL_SECTION m_cSection;
