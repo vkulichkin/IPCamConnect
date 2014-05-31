@@ -18,21 +18,21 @@
 					<Add option="-Wall" />
 					<Add option="-g" />
 					<Add option="-DBUILD_DLL" />
-					<Add directory="../../../deps/Braoadcast/Include" />
-					<Add directory="../../../deps/Braoadcast/Include/libavcodec" />
-					<Add directory="../../../deps/Braoadcast/Include/libavformat" />
-					<Add directory="../../../deps/Braoadcast/Include/libavutil" />
-					<Add directory="../../../deps/Braoadcast/Include/libswresample" />
-					<Add directory="../../../deps/Braoadcast/Include/libswscale" />
+					<Add directory="Include/ffmpeg" />
+					<Add directory="Include/ffmpeg/libavcodec" />
+					<Add directory="Include/ffmpeg/libavformat" />
+					<Add directory="Include/ffmpeg/libavutil" />
+					<Add directory="Include/ffmpeg/libswresample" />
+					<Add directory="Include/ffmpeg/libswscale" />
 				</Compiler>
 				<Linker>
 					<Add option="-static" />
 					<Add option="-Wl,-enable-auto-import" />
-					<Add option="..\..\..\deps\Braoadcast\Lib\libavcodec.dll.a" />
-					<Add option="..\..\..\deps\Braoadcast\Lib\libavformat.dll.a" />
-					<Add option="..\..\..\deps\Braoadcast\Lib\libavutil.dll.a" />
-					<Add option="..\..\..\deps\Braoadcast\Lib\libswresample.dll.a" />
-					<Add option="..\..\..\deps\Braoadcast\Lib\libswscale.dll.a" />
+					<Add option="Lib\ffmpeg\libavcodec.dll.a" />
+					<Add option="Lib\ffmpeg\llibavformat.dll.a" />
+					<Add option="Lib\ffmpeg\llibavutil.dll.a" />
+					<Add option="Lib\ffmpeg\llibswresample.dll.a" />
+					<Add option="Lib\ffmpeg\llibswscale.dll.a" />
 					<Add library="user32" />
 				</Linker>
 				<ExtraCommands>
@@ -52,22 +52,22 @@
 					<Add option="-O2" />
 					<Add option="-Wall" />
 					<Add option="-DBUILD_DLL" />
-					<Add directory="../../../deps/Braoadcast/Include" />
-					<Add directory="../../../deps/Braoadcast/Include/libavcodec" />
-					<Add directory="../../../deps/Braoadcast/Include/libavformat" />
-					<Add directory="../../../deps/Braoadcast/Include/libavutil" />
-					<Add directory="../../../deps/Braoadcast/Include/libswresample" />
-					<Add directory="../../../deps/Braoadcast/Include/libswscale" />
+					<Add directory="Include/ffmpeg" />
+					<Add directory="Include/ffmpeg/libavcodec" />
+					<Add directory="Include/ffmpeg/libavformat" />
+					<Add directory="Include/ffmpeg/libavutil" />
+					<Add directory="Include/ffmpeg/libswresample" />
+					<Add directory="Include/ffmpeg/libswscale" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
 					<Add option="-static" />
 					<Add option="-Wl,-enable-auto-import" />
-					<Add option="..\..\..\deps\Braoadcast\Lib\libavcodec.dll.a" />
-					<Add option="..\..\..\deps\Braoadcast\Lib\libavformat.dll.a" />
-					<Add option="..\..\..\deps\Braoadcast\Lib\libavutil.dll.a" />
-					<Add option="..\..\..\deps\Braoadcast\Lib\libswresample.dll.a" />
-					<Add option="..\..\..\deps\Braoadcast\Lib\libswscale.dll.a" />
+					<Add option="Lib\ffmpeg\libavcodec.dll.a" />
+					<Add option="Lib\ffmpeg\llibavformat.dll.a" />
+					<Add option="Lib\ffmpeg\llibavutil.dll.a" />
+					<Add option="Lib\ffmpeg\llibswresample.dll.a" />
+					<Add option="Lib\ffmpeg\llibswscale.dll.a" />
 					<Add library="user32" />
 				</Linker>
 				<ExtraCommands>
