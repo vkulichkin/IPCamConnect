@@ -3,8 +3,8 @@
 LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
 
 VS_VERSION_INFO    VERSIONINFO
-  FILEVERSION      1,0,0,1
-  PRODUCTVERSION   1,0,0,1
+  FILEVERSION      1,0,0,2
+  PRODUCTVERSION   1,0,0,2
   FILEFLAGSMASK    0x3fL // VS_FFI_FILEFLAGSMASK
 #ifdef _DEBUG
   FILEFLAGS        0x1L  // VS_FF_DEBUG|VS_FF_PRIVATEBUILD|VS_FF_PRERELEASE
@@ -19,21 +19,23 @@ VS_VERSION_INFO    VERSIONINFO
   {
     BLOCK "040904E4" // Lang=US English, CharSet=Windows Multilingual
     {
-      VALUE "Build",            "March 2014\0"
-      VALUE "Comments",         "SplitCam IP Camera\0"
-      VALUE "CompanyName",      "SplitCam.Co\0"
-      VALUE "Developer",        "SplitCam.Co\0"
-      VALUE "FileDescription",  "SplitCam IP Camera\0"
-      VALUE "FileVersion",      "1.0.0.1\0"
-      VALUE "InternalName",     "Broadcast\0"
-      VALUE "LegalCopyright",   "Copyright (C) 2014 SplitCam.Co\0"
+      VALUE "Build",            "May 2014\0"
+      VALUE "Comments",         "IPCamConnect\0"
+      VALUE "CompanyName",      "IPCamConnect\0"
+      VALUE "Developer",        "KVY-Research\0"
+      VALUE "FileDescription",  "IPCamConnect\0"
+      VALUE "Developer",        "KVY-Research\0"
+      VALUE "FileVersion",      "1.0.0.2\0"
+      VALUE "InternalName",     "IPCamConnect\0"
+      VALUE "Developer",        "KVY-Research\0"
+      VALUE "LegalCopyright",   "Copyright (C) 2014 KVY-Research\0"
       VALUE "LegalTrademarks",  "All rights reserved.\0"
       VALUE "OriginalFilename", "IPCamConnect.dll\0"
       VALUE "PrivateBuild",     "\0"
       VALUE "ProductName",      "IPCamConnect.dll\0"
-      VALUE "ProductVersion",   "1.0.0.1\0"
+      VALUE "ProductVersion",   "1.0.0.2\0"
       VALUE "SpecialBuild",     "\0"
-      VALUE "Support",          "http://www.SplitCamera.com\0"
+      VALUE "Support",          "http://www.kvy.com.ua\0"
       VALUE "Users",            "Unlimited.\0"
     } // BLOCK "040904E4"
   } // BLOCK "StringFileInfo"

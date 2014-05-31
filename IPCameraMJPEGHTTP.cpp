@@ -1,21 +1,19 @@
-#include "stdafx.h"
 #include "IPCameraMJPEGHTTP.h"
 #include <string>
 #include <vector>
-//#include <deque>
 
-CIPCameraMJPEGHTTP::CIPCameraMJPEGHTTP(char* strURL) 
+CIPCameraMJPEGHTTP::CIPCameraMJPEGHTTP(char* strURL)
 	: m_bErr(false)
 	//, m_pBuf(NULL)
 	//, m_iBufsize(0)
 	, m_bThreadRun(false)
 	, m_bStopThread(false)
 {
-	InitializeCriticalSection(&m_cSection);	
+	InitializeCriticalSection(&m_cSection);
 	if (!strURL)
 	{
 		m_bErr = true;
-		_tcscpy(m_strErr, L"Error: Empty URL for IPCamera");
+		wcscpy(m_strErr, L"Error: Empty URL for IPCamera");
 		return;
 	}
 
@@ -23,11 +21,11 @@ CIPCameraMJPEGHTTP::CIPCameraMJPEGHTTP(char* strURL)
 	if (!m_strURL)
 	{
 		m_bErr = true;
-		_tcscpy(m_strErr, L"Error: No memory for IPCamera");
+		wcscpy(m_strErr, L"Error: No memory for IPCamera");
 		return;
 	}
 	strcpy(m_strURL, strURL);
-	_tcscpy(m_strErr, L"No error");
+	wcscpy(m_strErr, L"No error");
 	_beginthread(Connect, 0, this);
 }
 
@@ -48,11 +46,11 @@ CIPCameraMJPEGHTTP::~CIPCameraMJPEGHTTP(void)
 		delete [] m_strURL;
 }
 
-bool CIPCameraMJPEGHTTP::CheckErr(TCHAR* strErr)
+bool CIPCameraMJPEGHTTP::CheckErr(wchar_t* strErr)
 {
 	if (m_bErr &&  strErr)
 	{
-		_tcscpy(strErr, m_strErr);
+		wcscpy(strErr, m_strErr);
 	}
 	return m_bErr;
 }
@@ -63,16 +61,16 @@ void CIPCameraMJPEGHTTP::Connect(void* ctx)
 	CIPCameraMJPEGHTTP* pParent = (CIPCameraMJPEGHTTP*)ctx;
 	pParent->m_bErr = false;
 	HINTERNET hSession = NULL;
-	HINTERNET hRequest =  NULL; 
+	HINTERNET hRequest =  NULL;
 	pParent->m_bThreadRun = true;
 
 	hSession = InternetOpenA("SplitCam MJPG listener", INTERNET_OPEN_TYPE_DIRECT, NULL, NULL, 0);
 	if (!hSession)
 	{
 		FormatMessage(
-			FORMAT_MESSAGE_ALLOCATE_BUFFER | 
+			FORMAT_MESSAGE_ALLOCATE_BUFFER |
 			FORMAT_MESSAGE_FROM_SYSTEM,
-			NULL, 
+			NULL,
 			GetLastError(),
 			MAKELANGID(LANG_NEUTRAL, SUBLANG_DEFAULT), // Default language
 			(LPTSTR) &cstr,
@@ -81,12 +79,12 @@ void CIPCameraMJPEGHTTP::Connect(void* ctx)
 		);
 		if (cstr)
 		{
-			_tcscpy(pParent->m_strErr, (TCHAR*)cstr);
+			wcscpy(pParent->m_strErr, (wchar_t*)cstr);
 			LocalFree(cstr);
 		}
 		else
 		{
-			_stprintf_s(pParent->m_strErr, L"Cannot open a connection with IP Camera, error: %i",  GetLastError());
+			swprintf(pParent->m_strErr, L"Cannot open a connection with IP Camera, error: %i",  GetLastError());
 		}
 		pParent->m_bErr = true;
 		pParent->m_bThreadRun = false;
@@ -98,9 +96,9 @@ void CIPCameraMJPEGHTTP::Connect(void* ctx)
 	if (!hRequest)
 	{
 		FormatMessage(
-			FORMAT_MESSAGE_ALLOCATE_BUFFER | 
+			FORMAT_MESSAGE_ALLOCATE_BUFFER |
 			FORMAT_MESSAGE_FROM_SYSTEM,
-			NULL, 
+			NULL,
 			GetLastError(),
 			MAKELANGID(LANG_NEUTRAL, SUBLANG_DEFAULT), // Default language
 			(LPTSTR) &cstr,
@@ -109,12 +107,12 @@ void CIPCameraMJPEGHTTP::Connect(void* ctx)
 		);
 		if (cstr)
 		{
-			_tcscpy(pParent->m_strErr, (TCHAR*)cstr);
+			wcscpy(pParent->m_strErr, (wchar_t*)cstr);
 			LocalFree(cstr);
 		}
 		else
 		{
-			_stprintf_s(pParent->m_strErr, L"Cannot open a connection with IP Camera, error: %i",  GetLastError());
+			swprintf(pParent->m_strErr, L"Cannot open a connection with IP Camera, error: %i",  GetLastError());
 		}
 		pParent->m_bErr = true;
 		pParent->m_bThreadRun = false;
@@ -124,7 +122,7 @@ void CIPCameraMJPEGHTTP::Connect(void* ctx)
 	}
 
 	pParent->PeekData(hRequest);
-	
+
 	InternetCloseHandle(hRequest);
 	InternetCloseHandle(hSession);
 	pParent->m_bThreadRun = false;
@@ -208,9 +206,9 @@ void CIPCameraMJPEGHTTP::GetBuffer(unsigned char** pBuf, int &iSize)
 	i += 4; //\r\n\r\n
 	for (int j = 0; j < i; j++)
 		m_deqSumBuf.pop_front();
-	
+
 	iSize = nSizeFrame;
-	*pBuf = new unsigned char [iSize];	
+	*pBuf = new unsigned char [iSize];
 	for (int i = 0; i < nSizeFrame; i++)
 	{
 		ch = m_deqSumBuf.at(0);
@@ -223,13 +221,10 @@ void CIPCameraMJPEGHTTP::GetBuffer(unsigned char** pBuf, int &iSize)
 int CIPCameraMJPEGHTTP::PeekData(HINTERNET hRequest)
 {
 	DWORD dwMessSize;
-	unsigned char* pMessBuf = NULL; 
-	//std::deque<unsigned char> deqSumBuf;
-	//std::vector<unsigned char> vecFrame;
-	int nSizeFrame = 0;
-	int nSizeFrameDuble = 0;
+	unsigned char* pMessBuf = NULL;
+
 	m_deqSumBuf.clear();
-	   
+
 	if (!hRequest)
 		return -1;
 	while (!m_bStopThread)
@@ -247,7 +242,7 @@ int CIPCameraMJPEGHTTP::PeekData(HINTERNET hRequest)
 	   pMessBuf = new unsigned char[dwMessSize];
 	   if(pMessBuf == NULL)
 	   {
-		   _tcscpy(m_strErr, L"No memory");
+		   wcscpy(m_strErr, L"No memory");
 		   m_bErr = true;
 		   break;
 	   }
@@ -257,9 +252,9 @@ int CIPCameraMJPEGHTTP::PeekData(HINTERNET hRequest)
 	   {
 			void *cstr = NULL;
 			FormatMessage(
-				FORMAT_MESSAGE_ALLOCATE_BUFFER | 
+				FORMAT_MESSAGE_ALLOCATE_BUFFER |
 				FORMAT_MESSAGE_FROM_SYSTEM,
-				NULL, 
+				NULL,
 				GetLastError(),
 				MAKELANGID(LANG_NEUTRAL, SUBLANG_DEFAULT), // Default language
 				(LPTSTR) &cstr,
@@ -268,19 +263,19 @@ int CIPCameraMJPEGHTTP::PeekData(HINTERNET hRequest)
 			);
 			if (cstr)
 			{
-				_tcscpy(m_strErr, (TCHAR*)cstr);
+				wcscpy(m_strErr, (wchar_t*)cstr);
 				LocalFree(cstr);
 			}
 			else
 			{
-				_stprintf_s(m_strErr, L"Cannot read IP Camera, error: %i",  GetLastError());
+				swprintf(m_strErr, L"Cannot read IP Camera, error: %i",  GetLastError());
 			}
 		   m_bErr = true;
 		   break;
 		}
 
 		EnterCriticalSection(&m_cSection);
-		for (int i = 0; i < (int)dwMessSize; i++ )	
+		for (int i = 0; i < (int)dwMessSize; i++ )
 		{
 			m_deqSumBuf.push_back(pMessBuf[i]);
 		}

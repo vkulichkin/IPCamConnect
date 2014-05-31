@@ -389,3 +389,219 @@
 1381129080 d:\work\splitcam_2012\deps\braoadcast\include\libswresample\version.h
 	"libavutil/avutil.h"
 
+1400171938 source:d:\vc.rac\ipcamera\ipcamconnect\cipcamconnect.cpp
+	"CIPCamConnect.h"
+	<process.h>
+	"avcodec.h"
+	"avformat.h"
+	"fifo.h"
+	"swscale.h"
+	"opt.h"
+	"imgutils.h"
+	"swresample.h"
+
+1399468725 d:\vc.rac\ipcamera\ipcamconnect\cipcamconnect.h
+	<windows.h>
+
+1401502092 d:\vc.rac\ipcamera\ipcamconnect\include\ffmpeg\libavcodec\avcodec.h
+	<errno.h>
+	"libavutil/samplefmt.h"
+	"libavutil/attributes.h"
+	"libavutil/avutil.h"
+	"libavutil/buffer.h"
+	"libavutil/cpu.h"
+	"libavutil/channel_layout.h"
+	"libavutil/dict.h"
+	"libavutil/frame.h"
+	"libavutil/log.h"
+	"libavutil/pixfmt.h"
+	"libavutil/rational.h"
+	"version.h"
+	"libavutil/mem.h"
+	"old_codec_ids.h"
+
+1401502092 d:\vc.rac\ipcamera\ipcamconnect\include\ffmpeg\libavutil\samplefmt.h
+	<stdint.h>
+	"avutil.h"
+	"attributes.h"
+
+1401502092 d:\vc.rac\ipcamera\ipcamconnect\include\ffmpeg\libavutil\avutil.h
+	"common.h"
+	"error.h"
+	"rational.h"
+	"version.h"
+	"macros.h"
+	"mathematics.h"
+	"log.h"
+	"pixfmt.h"
+
+1401502092 d:\vc.rac\ipcamera\ipcamconnect\include\ffmpeg\libavutil\common.h
+	<errno.h>
+	<inttypes.h>
+	<limits.h>
+	<math.h>
+	<stdint.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"attributes.h"
+	"version.h"
+	"libavutil/avconfig.h"
+	"config.h"
+	"intmath.h"
+	"common.h"
+	"mem.h"
+	"internal.h"
+
+1401502092 d:\vc.rac\ipcamera\ipcamconnect\include\ffmpeg\libavutil\attributes.h
+
+1401502092 d:\vc.rac\ipcamera\ipcamconnect\include\ffmpeg\libavutil\version.h
+	"macros.h"
+
+1401502092 d:\vc.rac\ipcamera\ipcamconnect\include\ffmpeg\libavutil\macros.h
+
+1401502092 d:\vc.rac\ipcamera\ipcamconnect\include\ffmpeg\libavutil\avconfig.h
+
+1401502092 d:\vc.rac\ipcamera\ipcamconnect\include\ffmpeg\libavutil\mem.h
+	<limits.h>
+	<stdint.h>
+	"attributes.h"
+	"error.h"
+	"avutil.h"
+
+1401502092 d:\vc.rac\ipcamera\ipcamconnect\include\ffmpeg\libavutil\error.h
+	<errno.h>
+	<stddef.h>
+
+1401502092 d:\vc.rac\ipcamera\ipcamconnect\include\ffmpeg\libavutil\rational.h
+	<stdint.h>
+	<limits.h>
+	"attributes.h"
+
+1401502092 d:\vc.rac\ipcamera\ipcamconnect\include\ffmpeg\libavutil\mathematics.h
+	<stdint.h>
+	<math.h>
+	"attributes.h"
+	"rational.h"
+	"intfloat.h"
+
+1401502092 d:\vc.rac\ipcamera\ipcamconnect\include\ffmpeg\libavutil\intfloat.h
+	<stdint.h>
+	"attributes.h"
+
+1401502092 d:\vc.rac\ipcamera\ipcamconnect\include\ffmpeg\libavutil\log.h
+	<stdarg.h>
+	"avutil.h"
+	"attributes.h"
+
+1401502092 d:\vc.rac\ipcamera\ipcamconnect\include\ffmpeg\libavutil\pixfmt.h
+	"libavutil/avconfig.h"
+	"version.h"
+	"old_pix_fmts.h"
+
+1401502092 d:\vc.rac\ipcamera\ipcamconnect\include\ffmpeg\libavutil\old_pix_fmts.h
+
+1401502092 d:\vc.rac\ipcamera\ipcamconnect\include\ffmpeg\libavutil\buffer.h
+	<stdint.h>
+
+1401502092 d:\vc.rac\ipcamera\ipcamconnect\include\ffmpeg\libavutil\cpu.h
+	"attributes.h"
+
+1401502092 d:\vc.rac\ipcamera\ipcamconnect\include\ffmpeg\libavutil\channel_layout.h
+	<stdint.h>
+
+1401502092 d:\vc.rac\ipcamera\ipcamconnect\include\ffmpeg\libavutil\dict.h
+	"version.h"
+
+1401502092 d:\vc.rac\ipcamera\ipcamconnect\include\ffmpeg\libavutil\frame.h
+	<stdint.h>
+	"avutil.h"
+	"buffer.h"
+	"dict.h"
+	"rational.h"
+	"samplefmt.h"
+	"version.h"
+
+1401502092 d:\vc.rac\ipcamera\ipcamconnect\include\ffmpeg\libavcodec\version.h
+	"libavutil/version.h"
+
+1401502092 d:\vc.rac\ipcamera\ipcamconnect\include\ffmpeg\libavcodec\old_codec_ids.h
+	"libavutil/common.h"
+
+1401502092 d:\vc.rac\ipcamera\ipcamconnect\include\ffmpeg\libavformat\avformat.h
+	<time.h>
+	<stdio.h>
+	"libavcodec/avcodec.h"
+	"libavutil/dict.h"
+	"libavutil/log.h"
+	"avio.h"
+	"libavformat/version.h"
+
+1401502092 d:\vc.rac\ipcamera\ipcamconnect\include\ffmpeg\libavutil\time.h
+	<stdint.h>
+
+1401502092 d:\vc.rac\ipcamera\ipcamconnect\include\ffmpeg\libavformat\avio.h
+	<stdint.h>
+	"libavutil/common.h"
+	"libavutil/dict.h"
+	"libavutil/log.h"
+	"libavformat/version.h"
+
+1401502092 d:\vc.rac\ipcamera\ipcamconnect\include\ffmpeg\libavformat\version.h
+	"libavutil/version.h"
+
+1401502092 d:\vc.rac\ipcamera\ipcamconnect\include\ffmpeg\libavutil\fifo.h
+	<stdint.h>
+	"avutil.h"
+	"attributes.h"
+
+1401502092 d:\vc.rac\ipcamera\ipcamconnect\include\ffmpeg\libswscale\swscale.h
+	<stdint.h>
+	"libavutil/avutil.h"
+	"libavutil/log.h"
+	"libavutil/pixfmt.h"
+	"version.h"
+
+1401502092 d:\vc.rac\ipcamera\ipcamconnect\include\ffmpeg\libswscale\version.h
+	"libavutil/version.h"
+
+1401502092 d:\vc.rac\ipcamera\ipcamconnect\include\ffmpeg\libavutil\opt.h
+	"rational.h"
+	"avutil.h"
+	"dict.h"
+	"log.h"
+	"pixfmt.h"
+	"samplefmt.h"
+
+1401502092 d:\vc.rac\ipcamera\ipcamconnect\include\ffmpeg\libavutil\imgutils.h
+	"avutil.h"
+	"pixdesc.h"
+
+1401502092 d:\vc.rac\ipcamera\ipcamconnect\include\ffmpeg\libavutil\pixdesc.h
+	<inttypes.h>
+	"attributes.h"
+	"pixfmt.h"
+
+1401502092 d:\vc.rac\ipcamera\ipcamconnect\include\ffmpeg\libswresample\swresample.h
+	<stdint.h>
+	"libavutil/samplefmt.h"
+	"libswresample/version.h"
+
+1401502092 d:\vc.rac\ipcamera\ipcamconnect\include\ffmpeg\libswresample\version.h
+	"libavutil/avutil.h"
+
+1401525098 source:d:\vc.rac\ipcamera\ipcamconnect\ipcameramjpeghttp.cpp
+	"IPCameraMJPEGHTTP.h"
+	<string>
+	<vector>
+
+1401521769 d:\vc.rac\ipcamera\ipcamconnect\ipcameramjpeghttp.h
+	<WinInet.h>
+	<deque>
+
+1399468724 source:d:\vc.rac\ipcamera\ipcamconnect\main.cpp
+	<windows.h>
+
+1401521519 source:d:\vc.rac\ipcamera\ipcamconnect\resource.rc
+	<windows.h>
+
