@@ -1,5 +1,3 @@
-//#include "main.h"
-//#include "CIPCamConnect.h"
 #include <windows.h>
 
 

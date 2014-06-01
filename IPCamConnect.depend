@@ -590,16 +590,17 @@
 1401502092 d:\vc.rac\ipcamera\ipcamconnect\include\ffmpeg\libswresample\version.h
 	"libavutil/avutil.h"
 
-1401525098 source:d:\vc.rac\ipcamera\ipcamconnect\ipcameramjpeghttp.cpp
+1401549723 source:d:\vc.rac\ipcamera\ipcamconnect\ipcameramjpeghttp.cpp
 	"IPCameraMJPEGHTTP.h"
 	<string>
 	<vector>
 
-1401521769 d:\vc.rac\ipcamera\ipcamconnect\ipcameramjpeghttp.h
+1401549567 d:\vc.rac\ipcamera\ipcamconnect\ipcameramjpeghttp.h
 	<WinInet.h>
 	<deque>
+	"CIPCamConnect.h"
 
-1399468724 source:d:\vc.rac\ipcamera\ipcamconnect\main.cpp
+1401630466 source:d:\vc.rac\ipcamera\ipcamconnect\main.cpp
 	<windows.h>
 
 1401521519 source:d:\vc.rac\ipcamera\ipcamconnect\resource.rc
