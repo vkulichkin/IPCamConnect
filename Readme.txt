@@ -32,6 +32,15 @@ DLLs from ffmpeg:
 \IPCamera\IPCamConnect\ffmpeg_dll
 
 ------------------------------------
+Usage for MJPEG
+
+1. #include "CIPCamConnect.h"
+
+2. Create the object:
+
+ICIPCameraMJPEGHTTP* pMJPEG = CreateICIPCameraMJPEGHTTP("http://......"); 
+
+3.
 
 
 

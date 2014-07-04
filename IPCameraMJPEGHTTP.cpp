@@ -193,7 +193,7 @@ void CIPCameraMJPEGHTTP::GetBuffer(unsigned char** pBuf, int &iSize)
 			return;
 		}
 	}
-	nSizeFrame = atoi(strLengthNumber) - 2;
+	nSizeFrame = atoi(strLengthNumber);
 	i += strlen(strLengthNumber);
 	if (nSizeFrame > m_deqSumBuf.size() - i - 4)
 	{
