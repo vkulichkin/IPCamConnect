@@ -85,7 +85,7 @@ int _tmain(int argc, _TCHAR* argv[])
 			pBuf = new unsigned char [iSize];
 			pP->GetBuffer(pBuf); //get data
 			//......
-			//do something here with data
+			//do something with data here 
 			//......
 			delete [] pBuf;
 		}
