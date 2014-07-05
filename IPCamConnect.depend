@@ -590,7 +590,7 @@
 1401502092 d:\vc.rac\ipcamera\ipcamconnect\include\ffmpeg\libswresample\version.h
 	"libavutil/avutil.h"
 
-1401549723 source:d:\vc.rac\ipcamera\ipcamconnect\ipcameramjpeghttp.cpp
+1404451588 source:d:\vc.rac\ipcamera\ipcamconnect\ipcameramjpeghttp.cpp
 	"IPCameraMJPEGHTTP.h"
 	<string>
 	<vector>
