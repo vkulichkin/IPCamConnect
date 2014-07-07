@@ -72,6 +72,7 @@ int _tmain(int argc, _TCHAR* argv[])
 		int iSize  = 0;
 		int x, y;
 		int n = 50, i = 0; //timer 5 sec
+		//wait for the first frame
 		while ((iSize = pP->GetSize(x, y)) == 0)
 		{
 			Sleep(100);
@@ -80,13 +81,18 @@ int _tmain(int argc, _TCHAR* argv[])
 				break;
 		}
 		if (iSize != 0)
-		{
+		{//receive only one frame
 			printf("ok\n");
+			pP->Lock();
+			iSize = pP->GetSize(x, y);
 			pBuf = new unsigned char [iSize];
 			pP->GetBuffer(pBuf); //get data
+			pP->Unlock();
+			
 			//......
 			//do something with data here 
 			//......
+			
 			delete [] pBuf;
 		}
 		else
