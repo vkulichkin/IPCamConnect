@@ -1,9 +1,38 @@
+CONTENT
+
+1. About codes
+2. License
+3. Output
+4. Fabric functions
+5. DLLs for run
+6. Usage for MJPEG
+7. Usage for H264
+8. Contact
+
+---------------------
+Codes.
+
 Handling streams of IP cameras:
 
 1. MJPEG by HTTP
 2. H264 by RTSP
-
 CodeBlocks project with using FFMPEG and OpenCV libraries
+
+------------------------------------------
+License
+
+This code is free software; you can redistribute it and/or modify it under
+the terms of the GNU Lesser General Public License as published by the
+Free Software Foundation; either version 2.1 of the License, or (at your
+option) any later version. (See <http://www.gnu.org/copyleft/lesser.html>.)
+
+This code is distributed in the hope that it will be useful, but WITHOUT
+ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU Lesser General Public License for
+more details.
+
+You should have received a copy of the GNU Lesser General Public License
+along with this code; if not, contact to me via http://www.kvy.com.ua 
 
 -------
 Output:
@@ -86,7 +115,7 @@ int _tmain(int argc, _TCHAR* argv[])
 			pP->Lock();
 			iSize = pP->GetSize(x, y);
 			pBuf = new unsigned char [iSize];
-			pP->GetBuffer(pBuf); //get data
+			pP->GetBuffer(pBuf); //get data in BGR24
 			pP->Unlock();
 			
 			//......
@@ -107,7 +136,7 @@ int _tmain(int argc, _TCHAR* argv[])
 }
 
 -------------------------------------------------------------------------
-
+Contact
 
 
 Victor Kulichkin
