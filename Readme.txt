@@ -80,6 +80,11 @@ Add later.......
 -----------------------------------------------
 Usage for H264
 
+!!!!!!Attention!!!!!!!!! 
+FFMPEG digest authentication worked incorrect for RTSP. I tested it on the last 07.2014 versions of FFMPEG.
+I found a solution of that problem, but have not time to move the new codes to GitHub. Please contact to me
+for details.   
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 #include "CIPCamConnect.h"
 
